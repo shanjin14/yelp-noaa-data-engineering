@@ -10,7 +10,7 @@ The project is using AWS. You would need to setup:
 1. AWS credential - Create a IAM users with AdministratorAccess. Obtain the access key ID and access secret key.
 2. Redshift - setup a redshift cluster. Recommend to use dc2.large and 2 nodes to save on dev cost
 3. EMR - it will be spin up and down by Airflow
-4. Airflow - you can spin up the Airflow in [AWS](https://aws.amazon.com/managed-workflows-for-apache-airflow/) or in [gcp](https://cloud.google.com/composer/).
+4. Airflow - you can spin up the Airflow in [AWS](https://aws.amazon.com/managed-workflows-for-apache-airflow/) or in [GCP](https://cloud.google.com/composer/).
   a. Note1: the version used is v1.10.2. It will have some functionality difference and library import differences compare to Airflow 2.0+
   b. Note2: the CLI command may have difference between v1+ and v2+. Please refer to Airflow official documentation.
      
