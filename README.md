@@ -46,4 +46,4 @@ The project is using AWS. You would need to setup:
           "VisibleToAllUsers": true}'
 
 ### Instruction
-1. Run the Airflow DAG 1_yelp_data_dag.py, 2_NOAA_data_dag.py
+1. Run the Airflow DAG 1_yelp_data_dag.py, 2_NOAA_data_dag.py,3_stg_fdn_dimensions.py,4_stg_to_fdn_fact.py
