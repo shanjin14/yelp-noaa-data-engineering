@@ -14,10 +14,11 @@ The project is using AWS. You would need to setup:
   a. Note1: the version used is v1.10.2. It will have some functionality difference and library import differences compare to Airflow 2.0+
   b. Note2: the CLI command may have difference between v1+ and v2+. Please refer to Airflow official documentation.
 
-  
+#### Thoughts on infra. improvement
+I think it would be good to move the staging area from AWS Redshift to AWS S3 and use AWS Spectrum for moving the data. It may help save the storage cost. It's wortwhile to test to know the cost saving vs latency
 
 ### Pre-requisites
-1. Setup the required infrastructure
+1. Setup the required infrastructure mentioned above
 1. use the DDL.sql to create all the table schema in redshift
 2. Setup all the connection in Airflow (NOAA token, aws_default, emr_default, redshift).Refer to AirflowCLI to add the connection, or you can add them using the Airflow UI. Instruction [here](https://airflow.apache.org/docs/apache-airflow/stable/howto/connection.html)
   a. CLI command as below:
@@ -47,3 +48,5 @@ The project is using AWS. You would need to setup:
 
 ### Instruction
 1. Run the Airflow DAG 1_yelp_data_dag.py, 2_NOAA_data_dag.py,3_stg_fdn_dimensions.py,4_stg_to_fdn_fact.py
+
+
